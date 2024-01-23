@@ -21,15 +21,14 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-
+        String[] story_array = getResources().getStringArray(R.array.story_array);
         Random rand = new Random();
 
-        binding.inputButton.setOnClickListener(new View.OnClickListener() {
+        binding.storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText input = binding.inputField;
-                TextView t = binding.output;
-                String text = input.getText().toString();
+                TextView t = binding.storyText;
+                t.setText(rand.nextInt(story_array.length));
             }
         });
     }
