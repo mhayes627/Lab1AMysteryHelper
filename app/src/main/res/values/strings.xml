@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Lab 1A Mystery Helper</string>
-    <string name="button_text">Click Me!</string>
+    <string name="button_text">Get Help</string>
     <string-array name="story_array">
         <item>you get knocked out</item>
         <item>you go somewhere else</item>

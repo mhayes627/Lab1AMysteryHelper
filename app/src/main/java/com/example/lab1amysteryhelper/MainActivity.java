@@ -24,11 +24,16 @@ public class MainActivity extends AppCompatActivity {
         String[] story_array = getResources().getStringArray(R.array.story_array);
         Random rand = new Random();
 
+
+
         binding.storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TextView t = binding.storyText;
-                t.setText(rand.nextInt(story_array.length));
+                t.setText(story_array[rand.nextInt(story_array.length-1)]);
+
+                TextView tf = binding.textFinal;
+                tf.setText(story_array[story_array.length-1]);
             }
         });
     }
